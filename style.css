@@ -16,3 +16,13 @@ h2 {
    color:  #4dba61
 }
 
+.box {
+    margin: 40px 0;
+    border: 3px dashed darkgreen;
+    padding: 60px;
+    background-color: #f8f6f6;
+    border-radius: 10px;
+}
+
+
+
