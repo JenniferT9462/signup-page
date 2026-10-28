@@ -38,6 +38,30 @@
          <section id="join" class="box">
             <h2>Join Us</h2>
             <p>Please fill out the form below to register for our club. </p>
+
+            <!-- Sign up form -->
+             <form>
+              <label for="name">Your Name: </label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+              <label for="email">Your Email: </label>
+              <input type="email" name="email" id="email" placeholder="you@example.com">
+
+
+              <label for="session">Which meeting can you come to?</label>
+              <select id="session" name="session">
+                  <option value="">Choose a session</option>
+                  <option value="first">First Sunday</option>
+                  <option value="third">Third Sunday</option>
+                  <option value="either">Either is fine</option>
+              </select>
+
+
+              <label for="message">Anything we should know?</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+
+              <button type="submit">Sign Up</button>
+             </form>
          </section>
      </main>
 
