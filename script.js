@@ -51,3 +51,13 @@ function showNextMeeting() {
 // Notice there are NO () after showNextMeeting. We are handing the function
 // to the button to run LATER, not running it right now.
 nextButton.addEventListener("click", showNextMeeting);
+
+
+// Day 3 - Live greeting while you type your name
+
+
+
+
+
+
+
