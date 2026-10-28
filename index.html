@@ -1,81 +1,113 @@
 <!doctype html>
 <html lang="en">
+  <!-- The <head> holds information ABOUT the page. Nothing in here shows up
+       on the page itself. -->
   <head>
+    <!-- Lets the page use any letter, symbol, or emoji correctly -->
     <meta charset="UTF-8" />
+    <!-- Makes the page fit nicely on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The text that shows on the browser tab -->
     <title>Sunday Book Club</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Connects our CSS file so the page gets its colors and layout -->
+    <link rel="stylesheet" href="style.css" />
   </head>
+
+  <!-- The <body> holds everything you can SEE on the page -->
   <body>
-    <!-- Day 1:  Header -->
+   
+    <!-- Day 1: <header> is the top area of the page: the title and a short tagline -->
     <header>
       <h1>Sunday Book Club</h1>
       <p>One book a month, good snacks and no pressure.</p>
     </header>
 
-    <!-- Day 1: navigation -->
+    
+    <!-- Day 1: <nav> holds the menu links. Each href="#something" jumps to the
+         element on this page that has id="something". -->
     <nav>
       <a href="#about">About</a>
       <a href="#schedule">Schedule</a>
-      <a href="#join">Join</a>  
+      <a href="#join">Join</a>
     </nav>
 
-    <!-- Day 1:  Main: 3 sections -->
-     <main>
-        <!-- Section 1 -->
-         <section id="about" class="box">
-            <h2>Read more. Talk more. Snack more.</h2>
-            <p>A friendly book club that meets twice a month.</p>
-         </section>
+    
+    <!-- Day 1: <main> holds the main content of the page. <section> tags split it
+         into parts. -->
+    <main>
+      <!-- Section 1 -->
+      <!-- id="about" lets the "About" nav link jump here.
+           class="box" gives it the box style from style.css. -->
+      <section id="about" class="box">
+       <h2>Read more. Talk more. Snack more.</h2>
+        <p>A friendly book club that meets twice a month.</p>
+      </section>
 
-        <!-- Section 2 -->
-         <section id="schedule" class="box">
-            <h2>See our schedule below. </h2>
-            <!-- <p>We meet on the first and third Sunday of every month, 3 to 5 PM, at the Oak Street Library.</p> -->
-             <button id="next-btn">When is the next meeting?</button>
-             <p id="next-meeting"></p>
-         </section>
+      <!-- Day 3: Flexbox card row -->
 
-        <!-- Section 3 -->
-         <section id="join" class="box">
-            <h2>Join Us</h2>
-            <p>Please fill out the form below to register for our club. </p>
+      <!-- This section shows the difference between BLOCK and INLINE elements -->
 
-            <!-- Sign up form -->
-             <form>
-              <label for="name">Your Name: </label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required>
+      <!-- Section 2 -->
+      <section id="schedule" class="box">
+        <h2>See our schedule below.</h2>
+        <button id="next-btn">When is the next meeting?</button>
+        <p id="next-meeting"></p>
+      </section>
 
-              <label for="email">Your Email: </label>
-              <input type="email" name="email" id="email" placeholder="you@example.com" required>
+      <!-- Section 3 -->
+      <section id="join" class="box">
+        <h2>Join Us</h2>
+        <p>Please fill out the form below to register for our club.</p>
+
+        <!-- Sign up form -->
+        <!-- <form> groups all the inputs together so they can be submitted
+             at once -->
+        <form>
+          <label for="name">Your Name: </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="John Doe"
+            required
+          />
+
+          <label for="email">Your Email: </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="session">Which meeting can you come to?</label>
+          <select id="session" name="session">
+            <option value="">Choose a session</option>
+            <option value="first">First Sunday</option>
+            <option value="third">Third Sunday</option>
+            <option value="either">Either is fine</option>
+          </select>
+
+          <label for="message">Anything we should know?</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <!-- type="submit" means clicking this button sends the form -->
+          <button type="submit">Sign Up</button>
+        </form>
+      </section>
+    </main>
 
 
-              <label for="session">Which meeting can you come to?</label>
-              <select id="session" name="session">
-                  <option value="">Choose a session</option>
-                  <option value="first">First Sunday</option>
-                  <option value="third">Third Sunday</option>
-                  <option value="either">Either is fine</option>
-              </select>
+    <!-- <footer> is the bottom area of the page -->
+    <footer>
+      <!-- &copy; is a special code that shows the © symbol -->
+      <p>Created by: Jennifer Tarleton @ CodeX Academy &copy; 2026</p>
+    </footer>
 
-
-              <label for="message">Anything we should know?</label>
-              <textarea id="message" name="message" rows="4"></textarea>
-
-              <button type="submit">Sign Up</button>
-             </form>
-         </section>
-     </main>
-
-
-     <!-- Footer -->
-      <footer>
-        <p>
-            Created by: Jennifer Tarleton @ CodeX Academy &copy; 2026
-        </p>
-      </footer>
-
-      <!-- Linking JS -->
-      <script src="script.js"></script>
+    
+    <!-- Connects our JavaScript file. It goes at the BOTTOM of the body so
+         all the HTML above has loaded before the script tries to find it. -->
+    <script src="script.js"></script>
   </body>
 </html>

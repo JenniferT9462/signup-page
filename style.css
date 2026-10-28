@@ -1,65 +1,91 @@
+/* * means "every element on the page".
+   box-sizing: border-box makes width include the padding and border,
+   so elements don't end up wider than we expect. */
 * {
   box-sizing: border-box;
 }
 
+/* When you click a nav link, the page glides smoothly to that section
+   instead of jumping instantly. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Styles for the whole page */
 body {
   font-family: Arial, sans-serif;
+  /* 0 space on the top and bottom, 24px on the left and right */
   margin: 0 24px;
+
   background-color: beige;
 }
 
 h1 {
-    color: #2f6b3a;
+  color: #2f6b3a;
 }
 
 h2 {
-   color:  #4dba61
+  color: #4dba61;
 }
 
 .box {
-    margin: 40px 0;
-    border: 3px dashed darkgreen;
-    padding: 60px;
-    background-color: #f8f6f6;
-    border-radius: 10px;
+  /* margin = space OUTSIDE the box (40px above and below, 0 on the sides) */
+  margin: 40px 0;
+  border: 3px solid darkgreen;
+  padding: 60px;
+  background-color: #f8f6f6;
+  border-radius: 10px;
 }
 
 /* Form styles */
+/* display: block puts each label on its own line, above its input */
 label {
   display: block;
-  margin-top: 16px;
   font-weight: bold;
 }
 
-input, select, textarea {
+/* A comma lets us style several kinds of elements at once.
+   These are all the boxes users type or choose in. */
+input,
+select,
+textarea {
+  /* Stretch to fill the space available... */
   width: 100%;
+  /* ...with a little room inside so the text isn't squished */
   padding: 8px;
+  /* ...but never wider than 30rem (about 480px), so they stay a nice size
+     on big screens */
   max-width: 30rem;
 }
 
+/* Styles for every button on the page */
 button {
-  margin-top: 16px;
+  /* Puts the button on its own line */
   display: block;
   padding: 10px;
   background-color: darkgreen;
-  color: white
+  color: white;
+  /* Removes the browser's default border */
+  border: none;
 }
 
+/* :focus is a "pseudo-class". It applies only while the user is typing in
+   (or has tabbed to) that box. The outline shows which box is active. */
 input:focus,
 select:focus,
 textarea:focus {
   outline: 3px solid darkgreen;
+  /* Leaves a 2px gap between the box and the outline */
   outline-offset: 2px;
 }
 
+/* :user-invalid applies when an input breaks its rules (like a "required"
+   box left empty, or an email with no @) AFTER the user has interacted
+   with it. It gives the box a red border as a warning. */
 input:user-invalid {
   border: 2px crimson solid;
 }
 
-
-
-
+/* Day 3: Flexbox card row */
+/* Coming soon: we will style .cards and .card here to line the cards
+   up side by side. */
