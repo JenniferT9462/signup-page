@@ -43,6 +43,7 @@ h2 {
 label {
   display: block;
   font-weight: bold;
+  
 }
 
 /* A comma lets us style several kinds of elements at once.
@@ -102,4 +103,17 @@ input:user-invalid {
   padding: 16px;
   background-color: white;
   border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 30rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
