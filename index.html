@@ -15,14 +15,12 @@
 
   <!-- The <body> holds everything you can SEE on the page -->
   <body>
-   
     <!-- Day 1: <header> is the top area of the page: the title and a short tagline -->
     <header>
       <h1>Sunday Book Club</h1>
       <p>One book a month, good snacks and no pressure.</p>
     </header>
 
-    
     <!-- Day 1: <nav> holds the menu links. Each href="#something" jumps to the
          element on this page that has id="something". -->
     <nav>
@@ -31,7 +29,6 @@
       <a href="#join">Join</a>
     </nav>
 
-    
     <!-- Day 1: <main> holds the main content of the page. <section> tags split it
          into parts. -->
     <main>
@@ -39,22 +36,46 @@
       <!-- id="about" lets the "About" nav link jump here.
            class="box" gives it the box style from style.css. -->
       <section id="about" class="box">
-       <h2>Read more. Talk more. Snack more.</h2>
+        <h2>Read more. Talk more. Snack more.</h2>
         <p>A friendly book club that meets twice a month.</p>
       </section>
 
+
+
       <!-- Day 3: Flexbox card row -->
+      <section id="reasons">
+        <h2>Three reasons to join</h2>
+
+        <div class="cards">
+          <!-- Card 1 -->
+          <div class="card">
+            <h3>Great books</h3>
+            <p>We vote on what to read next.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <h3>Good Snacks</h3>
+            <p>Someone always brings cookies!</p>
+          </div>
+
+          <!--Card 3 -->
+          <div class="card">
+            <h3>Meet New Friends</h3>
+            <p>Everyone is welcome!</p>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
 
       <!-- This section shows the difference between BLOCK and INLINE elements -->
-
-
-
-
-
-
-
-
-      
 
       <!-- Section 2 -->
       <section id="schedule" class="box">
@@ -104,11 +125,9 @@
 
           <!-- type="submit" means clicking this button sends the form -->
           <button type="submit">Sign Up</button>
-          
         </form>
       </section>
     </main>
-
 
     <!-- <footer> is the bottom area of the page -->
     <footer>
@@ -116,7 +135,6 @@
       <p>Created by: Jennifer Tarleton @ CodeX Academy &copy; 2026</p>
     </footer>
 
-    
     <!-- Connects our JavaScript file. It goes at the BOTTOM of the body so
          all the HTML above has loaded before the script tries to find it. -->
     <script src="script.js"></script>
