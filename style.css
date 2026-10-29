@@ -20,6 +20,12 @@ body {
   background-color: beige;
 }
 
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 h1 {
   color: #2f6b3a;
   
@@ -121,4 +127,28 @@ form {
 .compare * {
   outline: 2px dashed tomato;
 }
+
+/* Nav styles */
+nav {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  background-color: white;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: darkgreen;
+  color: white;
+  padding: 4px;
+  border-radius: 6px;
+}
+
 
