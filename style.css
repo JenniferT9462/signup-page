@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --brand: darkgreen;
+  --page-bg: #fbf8f2;
+  --text: #22251f;
+  --surface: white;
+  --headings: #5be945;
+}
+
+
+
 /* When you click a nav link, the page glides smoothly to that section
    instead of jumping instantly. */
 html {
@@ -16,8 +26,8 @@ body {
   font-family: Arial, sans-serif;
   /* 0 space on the top and bottom, 24px on the left and right */
   margin: 0;
-
-  background-color: beige;
+  color: var(--text);
+  background-color: var(--page-bg);
 }
 
 main {
@@ -27,12 +37,12 @@ main {
 }
 
 h1 {
-  color: #2f6b3a;
+  color: var(--brand);
   
 }
 
 h2 {
-  /* color: #4dba61; */
+  color: var(--headings);
   font-size: 2rem;
 }
 
@@ -45,9 +55,9 @@ h3 {
 .box {
   /* margin = space OUTSIDE the box (40px above and below, 0 on the sides) */
   margin: 40px 0;
-  border: 3px solid darkgreen;
+  border: 3px solid var(--brand);
   padding: 60px;
-  background-color: #f8f6f6;
+  background-color: var(--surface);
   border-radius: 10px;
 }
 
@@ -79,7 +89,7 @@ button {
   /* Puts the button on its own line */
   display: block;
   padding: 10px;
-  background-color: darkgreen;
+  background-color: var(--brand);
   color: white;
   /* Removes the browser's default border */
   border: none;
@@ -91,7 +101,7 @@ button {
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 3px solid darkgreen;
+  outline: 3px solid var(--brand);
   /* Leaves a 2px gap between the box and the outline */
   outline-offset: 2px;
 }
@@ -114,9 +124,9 @@ input:user-invalid {
 
 .card {
   flex: 1 1 200px;
-  border: 3px solid darkgreen;
+  border: 3px solid var(--brand);
   padding: 16px;
-  background-color: white;
+  background-color: var(--surface);
   border-radius: 10px;
 }
 
@@ -144,7 +154,7 @@ nav {
   top: 0;
   gap: 16px;
   justify-content: center;
-  background-color: white;
+  background-color: var(--surface);
   padding: 10px 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -153,20 +163,20 @@ nav a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: darkgreen;
+  color: var(--brand);
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 999px;
 }
 
 nav a:hover {
-  background-color: darkgreen;
-  color: white;
+  background-color: var(--brand);
+  color: var(--surface);
 }
 
 .hero {
-  background-color: rgba(0, 100, 0, 0.85);
-  color: white;
+  background-color: var(--brand);
+  color: var(--surface);
   padding: 64px 24px;
   text-align: center;
   margin-top: 32px;
@@ -187,5 +197,16 @@ nav a:hover {
   .hero h2 {
     font-size: 3rem;
   }
+}
+
+body.dark {
+  --brand: rgb(1, 161, 1);
+  --page-bg: #4f4e4d;
+  --text: #e5fbd0;
+  --surface: rgb(124, 164, 109);
+}
+
+body.dark nav a {
+  color: lightblue;
 }
 

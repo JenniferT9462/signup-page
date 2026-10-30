@@ -52,8 +52,16 @@ function showNextMeeting() {
 // to the button to run LATER, not running it right now.
 nextButton.addEventListener("click", showNextMeeting);
 
+// Day 4 - Dark Mode
+let themeButton = document.querySelector("#theme-btn");
 
-// Day 3 - Live greeting while you type your name
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+
+themeButton.addEventListener("click", toggleTheme);
+
+
 
 
 
