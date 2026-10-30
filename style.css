@@ -150,8 +150,8 @@ form {
 /* Nav styles */
 nav {
   position: sticky;
-  display: flex;
   top: 0;
+  display: flex;
   gap: 16px;
   justify-content: center;
   background-color: var(--surface);
@@ -208,5 +208,24 @@ body.dark {
 
 body.dark nav a {
   color: lightblue;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  gap: 16px;
+}
+
+.logo h1 {
+  margin-bottom: 0;
+}
+
+.logo p {
+  margin-top: 0;
 }
 
